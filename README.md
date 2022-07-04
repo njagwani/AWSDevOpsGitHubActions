@@ -20,7 +20,7 @@ AWS CodeDeploy - It is deployment service that automates application deployments
 3.   VS Studio Code 2019
 
 ## Solution Achitecture Diagram
-![](/Images/SolutionArchitecture.png)
+![](/Images/SolutionArchitecture.PNG)
 
 ## Step by Step Approach
 
@@ -72,14 +72,14 @@ Ackowledge the box for AWS Cloud formation template to create IAM resources
 
 
 You will now see that Cloud Formation template is creating all the resources which were specified in the template.yaml file. The Resources include the following:
-1.     2 EC2 Linux Instances with Tomcat Server and Code Deploy installed
-2.     Autoscaling group with Internet Application load balancer
-3.     CodeDeploy application name and deployment group
-4.     S3 bucket to store build artifacts
-5.     Identity and Access Management (IAM) OIDC identity provider
-6.     Instance profile for Amazon EC2 
-7.     Service role for CodeDeploy
-8.     Security groups for ALB and Amazon EC2
+1.    2 EC2 Linux Instances with Tomcat Server and Code Deploy installed
+2.    Autoscaling group with Internet Application load balancer
+3.    CodeDeploy application name and deployment group
+4.    S3 bucket to store build artifacts
+5.    Identity and Access Management (IAM) OIDC identity provider
+6.    Instance profile for Amazon EC2 
+7.    Service role for CodeDeploy
+8.    Security groups for ALB and Amazon EC2
 
 In the screenshot below, you can see all the resources that are being created.
 
@@ -146,17 +146,17 @@ Navigate to Github Actions under your repository. GitHub Actions is defined in t
 
 Since workflow is set to be manually run, follow the below steps to triger the workflow.
 
-1. Go to your Github Repo, Select Actions Tab
-2. Select Build and Deploy, then click on Run workflow on the right side.
-3. You will then see that workflow "Build and Deploy" has been triggered. It contains 2 jobs - Build and Package; Deploy
-4. In the screeshot below, you can see that job was executed successfully. 
-5. Build and Package stage builds the SpringBoot Application, generates a war file which is then uploaded to S3 bucket. 
-6. War file is seen in the Amazon S3 Bucket
-7. In the Deploy stage, workflow should have invoked the CodeDeploy Service and triggered the deployment. 
-8. Navigate to CodeDeploy on AWS Console, you will see that Deployment succeeded for Deployment Group "CodeDeployGroupName"
-9. Go to the output section of the cloud formation stack to obtain the URL of the Application Load Balancer. Copy the URL
-10. Paste in a web browser.
-11. You can now see that web page of sample Spring Boot Application. 
+1.    Go to your Github Repo, Select Actions Tab
+2.    Select Build and Deploy, then click on Run workflow on the right side.
+3.    You will then see that workflow "Build and Deploy" has been triggered. It contains 2 jobs - Build and Package; Deploy
+4.    In the screeshot below, you can see that job was executed successfully. 
+5.    Build and Package stage builds the SpringBoot Application, generates a war file which is then uploaded to S3 bucket. 
+6.    War file is seen in the Amazon S3 Bucket
+7.    In the Deploy stage, workflow should have invoked the CodeDeploy Service and triggered the deployment. 
+8.    Navigate to CodeDeploy on AWS Console, you will see that Deployment succeeded for Deployment Group "CodeDeployGroupName"
+9.    Go to the output section of the cloud formation stack to obtain the URL of the Application Load Balancer. Copy the URL
+10.   Paste in a web browser.
+11.   You can now see that web page of sample Spring Boot Application. 
 
 ![](/Images/Image19.png)
 
