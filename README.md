@@ -1,4 +1,4 @@
-# AWS DevOps - GitHub Actions Integration with AWS Code Deploy to Deploy a Web App to Amazon EC2 instance.
+# AWS DevOps - GitHub Actions Integration with AWS CodeDeploy to deploy a Web App to Amazon EC2 instance.
 
 Welcome to my AWS DevOps Project where I have used GitHub Actions to create a CI/CD workflow and used ASW Code Deploy to deploy a a very basic Java SpringBoot application to EC2 instances in an Autoscaling group.
 
@@ -19,7 +19,7 @@ AWS CodeDeploy - It is deployment service that automates application deployments
 2.   A GitHub Account with permissions to configure GitHub repositories, create workflows and configure Github Secrets.
 3.   VS Studio Code 2019
 
-## Solution Achitecture Diagram
+## Solution Achitecture
 ![](/Images/SolutionArchitecture.png)
 
 ## Step by Step Approach
@@ -72,7 +72,7 @@ Ackowledge the box for AWS Cloud formation template to create IAM resources
 
 
 You will now see that Cloud Formation template is creating all the resources which were specified in the template.yaml file. The Resources include the following:
-1.    2 EC2 Linux Instances with Tomcat Server and Code Deploy installed
+1.    Two EC2 Linux Instances with Tomcat Server and Code Deploy installed
 2.    Autoscaling group with Internet Application load balancer
 3.    CodeDeploy application name and deployment group
 4.    S3 bucket to store build artifacts
@@ -112,10 +112,10 @@ Now run the below commands to push the changes:
 
 ### Stage 4 - Setup Github Secrets
 
-     - Navigate to your Github repository. Click on Settings Tab & Select the Secrets Drop down. Click on Actions.
-     - Select New Repository Secret
-     - Enter the Secret name as "IAMROLE_GITHUB"
-     - Copy the value of GithubIAMRoleARN from Output section of Cloud Formation Stack and Paste it here. Click on Update Secret.
+- Navigate to your Github repository. Click on Settings Tab & Select the Secrets Drop down. Click on Actions.
+- Select New Repository Secret
+- Enter the Secret name as "IAMROLE_GITHUB"
+- Copy the value of GithubIAMRoleARN from Output section of Cloud Formation Stack and Paste it here. Click on Update Secret.
 
 ![](/Images/Image13.PNG)
 
