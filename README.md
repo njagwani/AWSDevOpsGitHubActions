@@ -36,39 +36,39 @@ Clone this repoistory to your PC.
 ### Stage 2 = Copy the code to your repository for Github actions to work.
      cp -r aws-codedeploy-github-actions-deployment/. AWSDevOpsGitHubActions
 
-![](/Images/Image1.png)
+![](/Images/Image1.PNG)
 
-![](/Images/Image2.png)
+![](/Images/Image2.PNG)
 
-![](/Images/Image28.png)
+![](/Images/Image28.PNG)
 
 You should have the a similar directory structure in your local repository as seen below.
 
-![](/Images/Image29.png)
+![](/Images/Image29.PNG)
 
 ### Stage 3 - Deploy the CloudFormation Stack
 
 On the AWS Console, navigate to search bar and type "Cloud formation template". Click on create "Stack", Select the option "upload a template" and choose the template.yaml file which can be found under cloud formation directory of this Github repo. Click on Next. 
 
-![](/Images/Image3.png)
+![](/Images/Image3.PNG)
 
 Enter the following details as seen below:
 
      - Stack Name = CodeDeployStack
      - VPV Configurations = Taken from the template and should be pre-populated after uploading the template.yaml file. 
 
-![](/Images/Image4.png)
+![](/Images/Image4.PNG)
 
      - GithubRepoName = njagwani/AWSDevOpsGitHubAactions
      - ThumbprintList = 6938fd4d98bab03faadb97b34396831e3780aea1
 
 Click on Next
 
-![](/Images/Image5.png)
+![](/Images/Image5.PNG)
 
 Ackowledge the box for AWS Cloud formation template to create IAM resources
 
-![](Images/Image6.png)
+![](Images/Image6.PNG)
 
 
 You will now see that Cloud Formation template is creating all the resources which were specified in the template.yaml file. The Resources include the following:
@@ -83,23 +83,23 @@ You will now see that Cloud Formation template is creating all the resources whi
 
 In the screenshot below, you can see all the resources that are being created.
 
-![](/Images/Image7.png)
+![](/Images/Image7.PNG)
 
-![](/Images/Image8.png)
+![](/Images/Image8.PNG)
 
-![](/Images/Image9.png)
+![](/Images/Image9.PNG)
 
 Navigate to the output section of the Cloud Formation Stack and copy the Deployment Bucket Value and GithubIAMRoleARN as seen below.
 
-![](/Images/Image10.png)
+![](/Images/Image10.PNG)
 
 Naviagte to your aws/scripts directory, locate the file "after-install.sh". Replace the bucket name with your Deployment Bucket Value as seen below and save it.
 
-![](/Images/Image11.png)
+![](/Images/Image11.PNG)
 
 Navigate to worflows directory, locate the file "deploy.yml". Replace the AWS_REGION as your current region "us-east-1" and S3 Bucket name to be the Deployment Bucket Value which was seen on the outputs of the Cloud Formation Stack. Be sure to save it. 
 
-![](/Images/Image12.png)
+![](/Images/Image12.PNG)
 
 
 Now run the below commands to push the changes:
@@ -117,11 +117,11 @@ Now run the below commands to push the changes:
      - Enter the Secret name as "IAMROLE_GITHUB"
      - Copy the value of GithubIAMRoleARN from Output section of Cloud Formation Stack and Paste it here. Click on Update Secret.
 
-![](/Images/Image13.png)
+![](/Images/Image13.PNG)
 
-![](/Images/Image14.png)
+![](/Images/Image14.PNG)
 
-![](/Images/Image15.png)
+![](/Images/Image15.PNG)
 
 ## Stage 5 - Integrate CodeDeploy with GitHub
 
@@ -134,11 +134,11 @@ This can be done by following the below steps:
 5. Click on "Connect to GitHub"
 6. You will the see a pop-up window requesting to Sign into GitHub to continue to AWS CodeDeploy, enter your credentials and select sign-in. 
 
-![](/Images/Image16.png)
+![](/Images/Image16.PNG)
 
-![](/Images/Image17.png)
+![](/Images/Image17.PNG)
 
-![](/Images/Image18.png)
+![](/Images/Image18.PNG)
 
 ## Stage 6 - Trigger the GitHub Actions Workflow
 
@@ -160,21 +160,21 @@ Since workflow is set to be manually run, follow the below steps to triger the w
 
 ![](/Images/Image19.png)
 
-![](/Images/Image20.png)
+![](/Images/Image20.PNG)
 
-![](/Images/Image21.png)
+![](/Images/Image21.PNG)
 
-![](/Images/Image22.png)
+![](/Images/Image22.PNG)
 
-![](/Images/Image23.png)
+![](/Images/Image23.PNG)
 
-![](/Images/Image24.png)
+![](/Images/Image24.PNG)
 
 ![](/Images/Image25.PNG)
 
-![](/Images/Image27.png)
+![](/Images/Image27.PNG)
 
-![](/Images/Image26.png)
+![](/Images/Image26.PNG)
 
 Cheers!
 
