@@ -20,7 +20,7 @@ AWS CodeDeploy - It is deployment service that automates application deployments
 3.   VS Studio Code 2019
 
 ## Solution Achitecture Diagram
-![](/Images/SolutionArchitecture.PNG)
+![](/Images/SolutionArchitecture.png)
 
 ## Step by Step Approach
 
