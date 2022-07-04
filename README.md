@@ -2,7 +2,7 @@
 
 Welcome to my AWS DevOps Project where I have used GitHub Actions to create a CI/CD workflow and used AWS Code Deploy to deploy a very basic Java SpringBoot application to EC2 instances in an Autoscaling group.
 
-## Goal - Automation
+## Goal - Continuous Integration / Continuos Delivery
 The main goal of this project is to implement Continuous Integration and Continuous Delivery (CI/CD) tooling as this practice drastically reduces the time to release new software updates by automating deployment activities.
 
 ## Quick facts on Github Actions and AWS Code Deploy
