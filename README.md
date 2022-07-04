@@ -1,7 +1,8 @@
-# AWS DevOps - GitHub Actions Integration with AWS CodeDeploy to deploy a Web App to Amazon EC2 instance.
+# AWS DevOps - Integrate GitHub Actions with AWS CodeDeploy to deploy a Web App to Amazon EC2 instance.
 
-Welcome to my AWS DevOps Project where I have used GitHub Actions to create a CI/CD workflow and used ASW Code Deploy to deploy a a very basic Java SpringBoot application to EC2 instances in an Autoscaling group.
+Welcome to my AWS DevOps Project where I have used GitHub Actions to create a CI/CD workflow and used AWS Code Deploy to deploy a very basic Java SpringBoot application to EC2 instances in an Autoscaling group.
 
+## Goal - Automation
 The main goal of this project is to implement Continuous Integration and Continuous Delivery (CI/CD) tooling as this practice drastically reduces the time to release new software updates by automating deployment activities.
 
 ## Quick facts on Github Actions and AWS Code Deploy
@@ -14,7 +15,7 @@ AWS CodeDeploy - It is deployment service that automates application deployments
 1.    Build AWS Core Infrastructure with the AWS infrastructure as code (IaC) service called AWS CloudFormation.
 2.    Integrate Github Actions with AWS Code Deploy to manage deployments on EC2 Autoscaling group. 
 
-## Prerequisties for this Project
+## Pre-requisties for this Project
 1.   An AWS Account with permissions to create necessary resources
 2.   A GitHub Account with permissions to configure GitHub repositories, create workflows and configure Github Secrets.
 3.   VS Studio Code 2019
@@ -33,7 +34,7 @@ Clone this repoistory to your PC.
 
      git clone https://github.com/njagwani/AWSDevOpsGithubActions.get
 
-### Stage 2 = Copy the code to your repository for Github actions to work.
+### Stage 2 - Copy the code to your repository for Github actions to work.
      cp -r aws-codedeploy-github-actions-deployment/. AWSDevOpsGitHubActions
 
 ![](/Images/Image1.PNG)
@@ -71,7 +72,10 @@ Ackowledge the box for AWS Cloud formation template to create IAM resources
 ![](Images/Image6.PNG)
 
 
-You will now see that Cloud Formation template is creating all the resources which were specified in the template.yaml file. The Resources include the following:
+You will now see that Cloud Formation template is creating all the resources which were specified in the template.yaml file. 
+
+The Resources include the following:
+
 1.    Two EC2 Linux Instances with Tomcat Server and Code Deploy installed
 2.    Autoscaling group with Internet Application load balancer
 3.    CodeDeploy application name and deployment group
