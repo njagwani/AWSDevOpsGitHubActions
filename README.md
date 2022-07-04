@@ -68,7 +68,7 @@ Click on Next
 
 Ackowledge the box for AWS Cloud formation template to create IAM resources
 
-![](/Images/Image6.png)
+![](AWSDevOpsGitHubActions/Images/Image6.png)
 
 
 You will now see that Cloud Formation template is creating all the resources which were specified in the template.yaml file. The Resources include the following:
